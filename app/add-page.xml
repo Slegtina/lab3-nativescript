@@ -1,12 +1,10 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo" loaded="{{loadedPage}}">
     <ActionBar title="Добавление задачи" icon="" />
     <StackLayout>
-        <Label class="title" text="ID" />
-        <TextField id="id" />
         <Label class="title" text="Имя" />
-        <TextField id="name" />
+        <TextField id="name" class="field" />
         <Label class="title" text="Описание" />
-        <TextField id="description" />
+        <TextField id="description" class="field" />
         <FlexboxLayout justifyContent="space-around" alignSelf="flex-end">
             <Button text="Отмена" tap="{{ cancel }}" class="-primary" />
             <Button text="Сохранить" tap="{{ save }}" class="-primary" />

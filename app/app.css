@@ -24,6 +24,9 @@ Button.-primary {
   font-size: 18;
   width: 100%;
 }
-Label.title {
+.title {
+  font-size: 18;
+}
+.field{
   font-size: 18;
 }
