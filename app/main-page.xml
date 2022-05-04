@@ -3,7 +3,7 @@
     <TabView androidTabsPosition="top" androidOffscreenTabLimit="0">
         <TabViewItem title="Текущие">
             <StackLayout class="p-20">
-                <ListView items="{{todoArray}}" rowHeight="50" separatorColor="black" height="550" itemTap="{{undoneItemTap}}">
+                <ListView items="{{todoArray}}" rowHeight="50" separatorColor="black" height="550" itemTap="{{todoItemTap}}">
                     <ListView.itemTemplate>
                         <FlexboxLayout class="list-group-item">
                             <Image src="~/images/unchecked.png"/>
