@@ -8,12 +8,19 @@ export class Todo {
     description: string;
     isDone: boolean;
 
-    constructor(id: string, name: string, descr: string){
-        this.id = id;
+    constructor(name: string, descr: string){
+        this.id = uuid();
         this.name = name;
         this.description = descr;
         this.isDone = false;
     }
+}
+
+function uuid(): string { // типа uuid генератор
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+      var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+      return v.toString(16);
+    });
 }
 
 export function saveToMem(todo: Todo): void{
