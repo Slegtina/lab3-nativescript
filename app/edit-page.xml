@@ -1,0 +1,18 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo" loaded="{{loadedPage}}">
+    <ActionBar title="Редактирование задачи" icon="" />
+    <StackLayout>
+        <Label class="title" text="Имя" />
+        <TextField id="name" class="field" />
+        <Label class="title" text="Описание" />
+        <TextField id="description" class="field" />
+        <DockLayout>
+            <Label class="title" text="Выполнено" />
+            <Switch id="isDone" checked="false" />
+        </DockLayout>
+        <FlexboxLayout justifyContent="space-around" alignSelf="flex-end">
+            <Button text="Отмена" tap="{{ cancel }}" class="-primary" />
+            <Button text="Удалить" tap="{{ delete }}" class="-primary" />
+            <Button text="Сохранить" tap="{{ save }}" class="-primary" />
+        </FlexboxLayout>
+    </StackLayout>
+</Page>
