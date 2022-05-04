@@ -15,9 +15,8 @@
             </StackLayout>
         </TabViewItem>
         <TabViewItem title="Выполненные">
-            <Label text="hjui" />
             <StackLayout class="p-20">
-                <ListView items="{{doneArray}}" rowHeight="50" separatorColor="black" height="600" itemTap="doneItemTap">
+                <ListView items="{{doneArray}}" rowHeight="50" separatorColor="black" height="600" itemTap="{{doneItemTap}}">
                     <ListView.itemTemplate>
                         <FlexboxLayout class="list-group-item">
                             <Image src="~/images/checked.png"/>
