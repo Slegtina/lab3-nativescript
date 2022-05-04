@@ -3,18 +3,29 @@
     <TabView androidTabsPosition="top" androidOffscreenTabLimit="0">
         <TabViewItem title="Текущие">
             <StackLayout class="p-20">
-                <ListView items="{{todoArray}}" rowHeight="50" separatorColor="black" height="550">
+                <ListView items="{{todoArray}}" rowHeight="50" separatorColor="black" height="550" itemTap="{{undoneItemTap}}">
                     <ListView.itemTemplate>
-                        <StackLayout class="list-group-item">
+                        <FlexboxLayout class="list-group-item">
+                            <Image src="~/images/unchecked.png"/>
                             <Label text="{{ name || 'Нет задач' }}" textWrap="true" class="title" />
-                        </StackLayout>
+                        </FlexboxLayout>
                     </ListView.itemTemplate>
                 </ListView>
                 <Button text="Добавить" tap="{{ addNewTodo }}" class="-primary" />
             </StackLayout>
         </TabViewItem>
         <TabViewItem title="Выполненные">
-            <Label text="fsaffa" />
+            <Label text="hjui" />
+            <StackLayout class="p-20">
+                <ListView items="{{doneArray}}" rowHeight="50" separatorColor="black" height="600" itemTap="doneItemTap">
+                    <ListView.itemTemplate>
+                        <FlexboxLayout class="list-group-item">
+                            <Image src="~/images/checked.png"/>
+                            <Label text="{{ name || 'Нет задач' }}" textWrap="true" class="title" />
+                        </FlexboxLayout>
+                    </ListView.itemTemplate>
+                </ListView>
+            </StackLayout>
         </TabViewItem>
     </TabView>
 </Page>
