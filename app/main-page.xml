@@ -1,13 +1,20 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
     <ActionBar title="Список задач" icon="" />
-    <StackLayout class="p-20">
-        <ListView items="{{todoArray}}" rowHeight="50" separatorColor="black" height="600">
-            <ListView.itemTemplate>
-                <StackLayout class="list-group-item">
-                    <Label text="{{ name || 'Нет задач' }}" textWrap="true" class="title" />
-                </StackLayout>
-            </ListView.itemTemplate>
-        </ListView>
-        <Button text="Добавить" tap="{{ addNewTodo }}" class="-primary" />
-    </StackLayout>
+    <TabView androidTabsPosition="top" androidOffscreenTabLimit="0">
+        <TabViewItem title="Текущие">
+            <StackLayout class="p-20">
+                <ListView items="{{todoArray}}" rowHeight="50" separatorColor="black" height="550">
+                    <ListView.itemTemplate>
+                        <StackLayout class="list-group-item">
+                            <Label text="{{ name || 'Нет задач' }}" textWrap="true" class="title" />
+                        </StackLayout>
+                    </ListView.itemTemplate>
+                </ListView>
+                <Button text="Добавить" tap="{{ addNewTodo }}" class="-primary" />
+            </StackLayout>
+        </TabViewItem>
+        <TabViewItem title="Выполненные">
+            <Label text="fsaffa" />
+        </TabViewItem>
+    </TabView>
 </Page>
